@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HW4 part4</title>
+  <style>
+
+    form {
+      width: 90%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 2px solid black;
+      background-color:lightblue;
+
+    }
+
+    input[type=text] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      text-decoration: underline;
+    }
+
+    ul {
+    list-style-type: none;
+    }
+
+    ul li { 
+      width: 90%;
+      font-family: Arial;
+      font-size: 18px;
+      padding: 12px 20px;
+      margin: 8px;
+      border: 2px solid black;
+      background-color:lightblue;
+      margin-left: -40px;
+    }
+    
+      #noPost {
+        font-family: Arial;
+        font-size: 30px;
+        color:black;
+      }
+  </style>
+  <script type="text/javascript" src="/DOMPurify-main/dist/purify.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>CSE134B HW4 part4 Blog Post</h1>
+  </header>
+
+  <main>
+    <h2>Add new post: </h2>
+        <dialog id="prompt1">
+          <form id="addF">
+            <label for="title">Post Title:</label>
+            <input id="item1" type="text" placeholder="title">
+            <label for="date">Post Date:</label>
+            <input id="item2" type="text" placeholder="date">
+            <label for="summary">Post Summary:</label>
+            <input id="item3" type="text" placeholder="summary">
+          </form>
+          <button id="addP" style="margin-left:0px;" onclick="addP()">Submit</button>
+          <button id="cusPrompt" onclick="cancelConPrompt1()">cancel</button>
+        </dialog>
+        <button id="submit">Add Post</button>
+
+        <h2>Post:</h2>    
+        <p id="noPost"></p>
+        <ul></ul>
+
+        <dialog id="prompt">
+            <form id="editF">
+              <label for="title">Post Title:</label>
+              <input id="item4" type="text" placeholder="title">
+              <label for="date">Post Date:</label>
+              <input id="item5" type="text" placeholder="date">
+              <label for="summary">Post Summary:</label>
+              <input id="item6" type="text" placeholder="summary">
+            </form>
+            <button id="editP" style="margin-left:0px;" onclick="editP()">Submit</button>
+            <button id="cusPrompt" onclick="cancelConPrompt()">cancel</button>
+        </dialog> 
+
+  </main>
+
+  <footer>
+    <hr>
+    <p>This page was made by Shanlin Hu </p>
+  </footer>
+  <script src="/part4/styledblog.js"></script>
+</body>
+
+</html>
